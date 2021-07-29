@@ -14,6 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 400px;
+    transform-style: preserve-3d;
 }
 
 .side {
@@ -21,12 +23,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: var(--size);
     width: var(--size);
     position: absolute;
-
     background-color: hsla(10, 100%, 50%, .5);
-    border: 1.5px solid hsla(10, 100%, 10%, .4);
+    border: 1px solid hsla(10, 100%, 10%, .4);
+
+    transform: rotateX(var(--rotate-x, 0)) rotateY(var(--rotate-y, 0)) translateZ(calc(var(--size) / 2)) ;
+    
 }
 
+.top {
+    --rotate-x: 90deg;
+}
+
+.right {
+    --rotate-y: 90deg;
+}
+
+.left {
+    --rotate-y: -90deg;
+}
+
+.bottom {
+    --rotate-x: -90deg;
+}
+
+.back {
+    --rotate-y: 180deg;
+}

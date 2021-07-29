@@ -9,3 +9,24 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
+.cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side {
+    --size: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: var(--size);
+    width: var(--size);
+    position: absolute;
+
+    background-color: hsla(10, 100%, 50%, .5);
+    border: 1.5px solid hsla(10, 100%, 10%, .4);
+}
+
